@@ -10,11 +10,12 @@ export const CallToAction = () => {
         className="absolute inset-0 bg-[url('/background-footer.svg')] bg-cover bg-center bg-no-repeat opacity-90"
       />
 
+      <div className="absolute top-0 left-1/2 -translate-y-1/2 -translate-x-1/2">
+        <Image src="/store.svg" alt="Store" width={60} height={60} />
+      </div>
+
       <div className="container relative">
         <div className="flex flex-col items-center gap-6 text-center">
-          <div className="absolute top-[-120px]">
-            <Image src="/store.svg" alt="Store" width={60} height={60} />
-          </div>
 
           <h2 className="font-sans text-gray-100 text-balance text-heading-xl">
             Crie uma loja online e inicie suas vendas ainda hoje
