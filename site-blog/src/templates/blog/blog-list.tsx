@@ -1,6 +1,7 @@
 import { Search } from "@/components/search";
 import { useRouter } from "next/router";
 import { PostCard } from "./components/post-card";
+import { PostGridCard } from "./components/post-grid-card";
 
 export function BlogList() {
   const router = useRouter();
@@ -11,7 +12,7 @@ export function BlogList() {
 
   return (
     <div className="flex flex-col py-24 flex-grow h-full">
-      <header>
+      <header className="pb-14">
         <div className="container space-y-6 flex flex-col items-start justify-between md:flex-row md:items-end lg:items-end">
           <div className="flex flex-col gap-4 md:px-0">
             <span className="text-body-tag text-cyan-100 w-fit rounded-md text-center md:text-left py-2 px-4 bg-cyan-300">BLOG</span>
@@ -25,17 +26,43 @@ export function BlogList() {
         </div>
       </header>
 
-      <PostCard 
-        slug="transformando-seu-negocio-em-uma-loja-virtual"
-        title="Transformando seu negócio em uma loja virtual"
-        description="Se você está buscando uma maneira simples e eficaz de vender seus produtos online, o Site..."
-        image="/assets/primeiro-post.png"
-        author={{
-          name: "Aspen Dodikis",
-          avatar: "/customer-01.png"
-        }}
-        publishedAt="07/04/2026"
-      />
+      <PostGridCard>
+        <PostCard 
+          slug="transformando-seu-negocio-em-uma-loja-virtual"
+          title="Transformando seu negócio em uma loja virtual"
+          description="Se você está buscando uma maneira simples e eficaz de vender seus produtos online, o Site..."
+          image="/assets/primeiro-post.png"
+          author={{
+            name: "Aspen Dodikis",
+            avatar: "/customer-01.png"
+          }}
+          publishedAt="07/04/2026"
+        />
+        
+        <PostCard 
+          slug="transformando-seu-negocio-em-uma-loja-virtual"
+          title="Transformando seu negócio em uma loja virtual"
+          description="Se você está buscando uma maneira simples e eficaz de vender seus produtos online, o Site..."
+          image="/assets/primeiro-post.png"
+          author={{
+            name: "Aspen Dodikis",
+            avatar: "/customer-01.png"
+          }}
+          publishedAt="07/04/2026"
+        />
+
+        <PostCard 
+          slug="transformando-seu-negocio-em-uma-loja-virtual"
+          title="Transformando seu negócio em uma loja virtual"
+          description="Se você está buscando uma maneira simples e eficaz de vender seus produtos online, o Site..."
+          image="/assets/primeiro-post.png"
+          author={{
+            name: "Aspen Dodikis",
+            avatar: "/customer-01.png"
+          }}
+          publishedAt="07/04/2026"
+        />
+      </PostGridCard>
     </div>
   )
 }
