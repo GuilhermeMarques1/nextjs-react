@@ -41,7 +41,7 @@ export function BlogList() {
               name: post.author.name,
               avatar: post.author.avatar,
             }}
-            publishedAt={post.date}
+            publishedAt={new Date(post.date).toLocaleDateString('pt-BR')}
           />
         ))}
       </PostGridCard>
