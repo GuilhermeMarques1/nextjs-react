@@ -6,7 +6,7 @@ export type ShareConfig = {
   title?: string;
 }
 
-export type SocialProvider = keyof typeof SOCIAL_PROVIDERS;
+export type SocialProvider = keyof typeof SOCIAL_PROVIDERS | 'clipboard';
 
 export const SOCIAL_PROVIDERS = {
   linkedin: {
